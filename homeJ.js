@@ -14,5 +14,5 @@ month[10] = "November";
 month[11] = "December";
 var n = month[d.getMonth()];
 var y = d.getFullYear();
-document.getElementById("mnth").innerHTML = d;
+document.getElementById("mnth").innerHTML = n;
 document.getElementById("yr").innerHTML = y;
