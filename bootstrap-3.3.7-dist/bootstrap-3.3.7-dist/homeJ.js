@@ -17,7 +17,6 @@ var y = d.getFullYear();
 document.getElementById("mnth").innerHTML = n;
 document.getElementById("yr").innerHTML = y;
 var currentSeconds = $.now().getSeconds();
-//trying to set up alerts
 if(d == eventTime){
   alert("test");
 }

@@ -14,16 +14,9 @@ month[10] = "November";
 month[11] = "December";
 var n = month[d.getMonth()];
 var y = d.getFullYear();
-document.getElementById("mnth").innerHTML = n;
-document.getElementById("yr").innerHTML = y;
-var currentSeconds = $.now().getSeconds();
-//trying to set up alerts
-if(d == eventTime){
-  alert("test");
-}
-
-// taskbar css
-// close button and appending it to each item
+var s =d.getDate();
+document.getElementById("m1").innerHTML = n;
+document.getElementById("d1").innerHTML = s;
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -77,4 +70,3 @@ function newElement() {
       div.style.display = "none";
     }
   }
-}
