@@ -17,6 +17,10 @@ var y = d.getFullYear();
 document.getElementById("mnth").innerHTML = n;
 document.getElementById("yr").innerHTML = y;
 
+var currentSeconds = $.now().getSeconds();
+if(currentTime == eventTime) { alert("TASK!")
+}
+
 // taskbar css
 // close button and appending it to each item
 var myNodelist = document.getElementsByTagName("LI");
