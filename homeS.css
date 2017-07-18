@@ -20,6 +20,7 @@ nav a:hover {
     padding: 70px 25px;
     width: 100%;
     background: #1abc9c;
+    font-family: 'Lobster', cursive;
 }
 
 /* Month list */
@@ -52,6 +53,9 @@ nav a:hover {
     margin: 0;
     padding: 10px 0;
     background-color:#ddd;
+    font-family: 'Lobster', cursive;
+
+
 }
 
 .weekdays li {
@@ -87,4 +91,9 @@ nav a:hover {
 
 .calendar {
   float: left;
+  width: 50%;
+}
+
+body {
+    background-color: mistyrose;
 }
