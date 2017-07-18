@@ -3,6 +3,14 @@ body {
     background-size: 100% 98%;
     background-position: bottom;
 }
+nav {
+  color: black;
+  text-align: left;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}
 
 nav a {
   color: black;
