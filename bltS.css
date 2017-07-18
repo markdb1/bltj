@@ -1,0 +1,18 @@
+body {
+    background: url("http://4.bp.blogspot.com/-kGCbaHjvBCQ/VoIBrmEXj2I/AAAAAAAABBs/fBR0ez6XY6Y/s1600/imagenes-de-libros-abiertos-en-blanco-2.jpg");
+    background-size: 100% 100%;
+}
+
+nav a {
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+
+}
+/*nav bar cont*/
+nav a:hover {
+  background: grey;
+}
