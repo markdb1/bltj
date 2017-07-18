@@ -1,6 +1,7 @@
 body {
     background: url("http://4.bp.blogspot.com/-kGCbaHjvBCQ/VoIBrmEXj2I/AAAAAAAABBs/fBR0ez6XY6Y/s1600/imagenes-de-libros-abiertos-en-blanco-2.jpg");
-    background-size: 100% 100%;
+    background-size: 100% 98%;
+    background-position: bottom;
 }
 
 nav a {
@@ -14,5 +15,17 @@ nav a {
 }
 /*nav bar cont*/
 nav a:hover {
-  background: grey;
+  background: mistyrose;
+}
+
+.month {
+  font-family: 'Lobster', cursive;
+  font-size: 200%;
+  transform: translate(7%, -5%);
+}
+
+.day {
+  font-family: 'Lobster', cursive;
+  font-size: 200%;
+  transform: translate(11.5%, -180%);
 }
