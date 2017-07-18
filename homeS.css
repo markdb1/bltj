@@ -1,5 +1,19 @@
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
+/*nav bar*/
+nav a {
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+
+}
+/*nav bar cont*/
+nav a:hover {
+  background: grey;
+}
 
 /* Month header */
 .month {
