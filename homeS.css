@@ -241,3 +241,7 @@ input{
 .sidebar{
   float: right;
 }
+
+.heading{
+  font-family: 'Lobster', cursive;
+}
