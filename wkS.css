@@ -138,9 +138,14 @@ input{
 }
 
 .sidebar{
-  float: right;
+  width: 14%;
+  float: left;
 }
 
 .group {
+  font-family: 'Lobster', cursive;
+}
+
+.heading {
   font-family: 'Lobster', cursive;
 }
