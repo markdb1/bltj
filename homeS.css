@@ -32,6 +32,10 @@ section p, .container-fluid {
   font-family: cursive, sans-serif;
 }
 
+
+qupteDisplay.clear {
+    clear: both;
+}
 section {
   min-height: 90vh;
   padding-top: 10px;
