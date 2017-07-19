@@ -1,4 +1,19 @@
 <head>
+  <script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
   <link rel="stylesheet" type="text/css" href="bltS.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <nav>
@@ -13,11 +28,11 @@
 </nav>
 </head>
 <body>
+   <!-- current date display for page header -abc -->
   <p class= "month" id="m1"></p>
   <p class="day" id="d1"></p>
   <div class="sidebar">
     <div class="header">
-      <h1>Tasks</h1>
         <input type="text" id="myInput" placehoder="Create a task">
       <span onclick="newElement()" class="addBtn">Add</span>
     </div>
@@ -28,7 +43,11 @@
        <li>Test 3 </li>
     </ul>
     </div>
+    <!-- working on stickers -abc -->
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
+    <img id="drag1" src="https://image.flaticon.com/icons/png/512/35/35538.png" draggable="true"
+    ondragstart="drag(event)" width="336" height="69">
 </body>
 <script src="bltJ.js"></script>
 <footer></footer>

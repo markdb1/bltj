@@ -1,3 +1,4 @@
+// gets date info and gives it to be displayed -abc
 var d = new Date();
 var month = new Array();
 month[0] = "January";
@@ -17,6 +18,7 @@ var y = d.getFullYear();
 var s =d.getDate();
 document.getElementById("m1").innerHTML = n;
 document.getElementById("d1").innerHTML = s;
+
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {

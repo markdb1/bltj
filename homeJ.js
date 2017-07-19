@@ -1,25 +1,28 @@
-var d = new Date();
-var month = new Array();
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
-var n = month[d.getMonth()];
-var y = d.getFullYear();
-document.getElementById("mnth").innerHTML = n;
-document.getElementById("yr").innerHTML = y;
-var currentSeconds = $.now().getSeconds();
-//trying to set up alerts
-if(d == eventTime){
-  alert("test");
+ // gets date info and gives it to info display -abc
+function current() {
+  var d = new Date();
+  var month = new Array();
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  var n = month[d.getMonth()];
+  var y = d.getFullYear();
+  document.getElementById("mnth").innerHTML = n;
+  document.getElementById("yr").innerHTML = y;
+  var currentSeconds = $.now().getSeconds();
+  //trying to set up alerts at given time -abc
+  if(d == eventTime){
+    alert("test");
+}
 }
 
 // taskbar css
@@ -41,25 +44,7 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-  };
-}
-
-// Random Quote Generator
-
-var quotes = ['Don\'t cry because it\'s over, smile because it happened. - Dr. Seuss',
-  'Be yourself; everyone else is already taken. ― Oscar Wilde',
-  'You\'ve gotta dance like there\'s nobody watching, Love like you\'ll never be hurt, Sing like there\'s nobody listening, And live like it\'s heaven on earth. ― William W. Purkey',
-  'A room without books is like a body without a soul. ― Marcus Tullius Cicero',
-  'You know you\'re in love when you can\'t fall asleep because reality is finally better than your dreams. ― Dr. Seuss',
-  'You only live once, but if you do it right, once is enough. ― Mae West',
-  'In three words I can sum up everything I\'ve learned about life: it goes on. ― Robert Frost',
-  '“If you tell the truth, you don\'t have to remember anything. ― Mark Twain',
-];
-
-function newQuote(){
-  console.log(quotes);
-  var randomNumber = Math.floor(Math.random()* (quotes.length));
-  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+  }
 }
 
 // checked symbol when clicked
@@ -93,6 +78,6 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    };
+    }
   }
 }

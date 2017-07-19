@@ -1,3 +1,4 @@
+// gets data and formats for display -abc
 var d = new Date();
 var month = new Array();
 month[0] = "January";
