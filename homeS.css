@@ -22,6 +22,22 @@ nav a {
 nav a:hover {
   background: grey;
 }
+/*quote generator*/
+section p, .container-fluid {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #red;
+  font-family: cursive, sans-serif;
+}
+
+section {
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 10px;
+}
 
 /* the "someone's calendar"*/
 div someone {
