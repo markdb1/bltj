@@ -18,7 +18,7 @@
    </div>
 </nav>
 </head>
-<body onload="current()"> <!-- loads current date to date displays -abc-->
+<body window.onload="current()", "close2", "close1"> <!-- loads current date to date displays -abc-->
  <div class = "calendar">
   <header></header>
    <!-- calendar config -abc -->
@@ -74,6 +74,8 @@
   <li>29</li>
   <li>30</li>
   <li>31</li>
+
+  <!--quote generator- kate -->
   <div id="quoteDisplay"></div>
   <button onclick="newQuote()">New Quote</button>
  </div>
