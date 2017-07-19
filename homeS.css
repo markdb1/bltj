@@ -257,3 +257,7 @@ input{
     font-family: 'Lobster', cursive;
     font-size: 50px;
 }
+
+.quote {
+  text-align: center;
+}
