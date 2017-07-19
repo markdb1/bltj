@@ -41,13 +41,12 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-  }
+  };
 }
 
 // Random Quote Generator
 
-var quotes = [
-  'Don\'t cry because it\'s over, smile because it happened. ― Dr. Seuss',
+var quotes = ['Don\'t cry because it\'s over, smile because it happened. - Dr. Seuss',
   'Be yourself; everyone else is already taken. ― Oscar Wilde',
   'You\'ve gotta dance like there\'s nobody watching, Love like you\'ll never be hurt, Sing like there\'s nobody listening, And live like it\'s heaven on earth. ― William W. Purkey',
   'A room without books is like a body without a soul. ― Marcus Tullius Cicero',
@@ -55,9 +54,10 @@ var quotes = [
   'You only live once, but if you do it right, once is enough. ― Mae West',
   'In three words I can sum up everything I\'ve learned about life: it goes on. ― Robert Frost',
   '“If you tell the truth, you don\'t have to remember anything. ― Mark Twain',
-]
+];
 
 function newQuote(){
+  console.log(quotes);
   var randomNumber = Math.floor(Math.random()* (quotes.length));
   document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
 }
@@ -93,6 +93,6 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    }
+    };
   }
 }
