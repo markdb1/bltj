@@ -72,3 +72,8 @@ function newElement() {
       div.style.display = "none";
     }
   }
+
+
+
+// sticker testing
+// target elements with the "draggable" class

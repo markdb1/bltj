@@ -74,16 +74,16 @@ div someone {
 }
 
 /* Previous button inside month header */
-.month .prev {
+/*.month .prev {
     float: left;
     padding-top: 10px;
-}
+}*/
 
 /* Next button */
-.month .next {
+/*.month .next {
     float: right;
     padding-top: 10px;
-}
+}*/
 
 /* Weekdays (Mon-Sun) */
 .weekdays {
