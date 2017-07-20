@@ -19,41 +19,61 @@ var s =d.getDate();
 document.getElementById("m1").innerHTML = n;
 document.getElementById("d1").innerHTML = s;
 
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+//taskbar js - Victoria
+// adds a close button to each item in task
+function closebtn() {
+  //changed the document.getElementsByTagName to getElementsByClassName
+  var myNodelist = document.getElementsByClassName("taskitem");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
 }
+
+closebtn();
 
 // close button to hide current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+function closeitem() {
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
   }
 }
 
+closeitem();
+
 // checked symbol when clicked
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev){
-  if (ev.target.tagName === 'LI'){
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+function checkoff() {
+  var list = document.querySelector("#myUL");
+  list.addEventListener(
+    "click",
+    function(ev) {
+      if (ev.target.tagName === "LI") {
+        ev.target.classList.toggle("checked");
+      }
+    },
+    false
+  );
+}
+
+checkoff();
 
 // create a new list item when add is clicked
 function newElement() {
   var li = document.createElement("li");
+  li.className = "taskitem"; //trying to put the newly created li into a class
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === '') {
+  if (inputValue === "") {
     alert("Please write something.");
   } else {
     document.getElementById("myUL").appendChild(li);
@@ -70,10 +90,10 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    }
+    };
   }
-
-
+  closeitem();
+}
 
 // sticker testing
 // target elements with the "draggable" class
