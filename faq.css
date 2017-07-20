@@ -13,7 +13,7 @@ nav a:hover {
   background: grey;
 }
 
-div aboutUS {
+h1, h2, h3 {
   color: black;
   text-align: center;
   padding: 14px;
@@ -21,4 +21,17 @@ div aboutUS {
   font-size: 30px;
   font-family: 'Lobster', cursive;
 
+}
+
+p1, p2, p3 {
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+body {
+    background-color: mistyrose;
 }
