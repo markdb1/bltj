@@ -1,5 +1,10 @@
+/*Background of the home page*/
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+body {
+  font-family: Verdana, sans-serif;
+  background-color: mistyrose;
+}
+
 /*nav bar*/
 nav {
   color: black;
@@ -21,26 +26,6 @@ nav a {
 /*nav bar cont*/
 nav a:hover {
   background: grey;
-}
-/*quote generator*/
-section p, .container-fluid {
-  text-align: center;
-  padding-bottom: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
-  color: #red;
-  font-family: cursive, sans-serif;
-}
-
-
-qupteDisplay.clear {
-    clear: both;
-}
-section {
-  min-height: 90vh;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  bottom: 10px;
 }
 
 /* the "someone's calendar"*/
@@ -131,9 +116,6 @@ div someone {
   width: 50%;
 }
 
-body {
-    background-color: mistyrose;
-}
 
 /*taskbar css*/
 
@@ -250,6 +232,8 @@ input{
   font-family: 'Lobster', cursive;
 }
 
+
+/*Quote css*/
 .quoty {
   position: fixed;
     bottom: 25;
@@ -260,4 +244,24 @@ input{
 
 .quote {
   text-align: center;
+}
+/*quote generator*/
+section p, .container-fluid {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #red;
+  font-family: cursive, sans-serif;
+}
+
+
+qupteDisplay.clear {
+    clear: both;
+}
+section {
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 10px;
 }

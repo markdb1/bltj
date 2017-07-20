@@ -1,4 +1,4 @@
- // gets date info and gives it to info display -abc
+// Calendar - gets date info and gives it to info display -abc
 function current() {
   var d = new Date();
   var month = new Array();
@@ -20,15 +20,16 @@ function current() {
   document.getElementById("yr").innerHTML = y;
   var currentSeconds = $.now().getSeconds();
   //trying to set up alerts at given time -abc
-  if(d == eventTime){
+  if (d == eventTime) {
     alert("test");
   }
 }
 
-// taskbar css
-// close button and appending it to each item
-window.onload = function close2() {
-  var myNodelist = document.getElementsByTagName("LI");
+// taskbar js - Victoria
+// adds a close button to each item in task
+function closebtn() {
+  //changed the document.getElementsByTagName to getElementsByClassName
+  var myNodelist = document.getElementsByClassName("taskitem");
   var i;
   for (i = 0; i < myNodelist.length; i++) {
     var span = document.createElement("SPAN");
@@ -38,58 +39,45 @@ window.onload = function close2() {
     myNodelist[i].appendChild(span);
   }
 }
-//^^ That doesn't work
 
-
-
+closebtn();
 // close button to hide current list item
-window.onload = function close2() {
+function closeitem() {
   var close = document.getElementsByClassName("close");
   var i;
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    }
+    };
   }
 }
-//^^ That doesn't work
 
-
-// quote generator code -- kate
-var quotes = [
-  'Don\'t cry because it\'s over, smile because it happened. -Dr. Seuss',
-  'Be yourself; everyone else is already taken. -Oscar Wilde',
-  'You\'ve gotta dance like there\'s nobody watching, Love like you\'ll never be hurt, Sing like there\'s nobody listening, And live like it\'s heaven on earth. -William W. Purkey',
-  'A room without books is like a body without a soul. -Marcus Tullius Cicero',
-  'You know you\'re in love when you can\'t fall asleep because reality is finally better than your dreams. -Dr. Seuss',
-  'You only live once, but if you do it right, once is enough. -Mae West',
-  'In three words I can sum up everything I\'ve learned about life: it goes on. -Robert Frost',
-  'If you tell the truth, you don\'t have to remember anything. -Mark Twain',
-  'A friend is someone who knows all about you and still loves you. -Elbert Hubbard',
-  'Live as if you were to die tomorrow. Learn as if you were to live forever. -Mahatma Gandhi'
-];
-
-function newQuote(){
-  var randomNumber = Math.floor(Math.random()* (quotes.length));
-  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
-}
-
+closeitem();
 // checked symbol when clicked
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev){
-  if (ev.target.tagName === 'LI'){
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+function checkoff() {
+  var list = document.querySelector("#myUL");
+  list.addEventListener(
+    "click",
+    function(ev) {
+      if (ev.target.tagName === "LI") {
+        ev.target.classList.toggle("checked");
+      }
+    },
+    false
+  );
+}
+
+checkoff();
 
 // create a new list item when add is clicked
 function newElement() {
   var li = document.createElement("li");
+  li.className = "taskitem"; //trying to put the newly created li into a class
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === '') {
+  if (inputValue === "") {
     alert("Please write something.");
   } else {
     document.getElementById("myUL").appendChild(li);
@@ -106,6 +94,26 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    }
+    };
   }
+  closeitem();
+}
+
+// quote generator code -- kate
+var quotes = [
+  "Don't cry because it's over, smile because it happened. -Dr. Seuss",
+  "Be yourself; everyone else is already taken. -Oscar Wilde",
+  "You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth. -William W. Purkey",
+  "A room without books is like a body without a soul. -Marcus Tullius Cicero",
+  "You know you're in love when you can't fall asleep because reality is finally better than your dreams. -Dr. Seuss",
+  "You only live once, but if you do it right, once is enough. -Mae West",
+  "In three words I can sum up everything I've learned about life: it goes on. -Robert Frost",
+  "If you tell the truth, you don't have to remember anything. -Mark Twain",
+  "A friend is someone who knows all about you and still loves you. -Elbert Hubbard",
+  "Live as if you were to die tomorrow. Learn as if you were to live forever. -Mahatma Gandhi"
+];
+
+function newQuote() {
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quoteDisplay").innerHTML = quotes[randomNumber];
 }

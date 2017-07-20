@@ -3,18 +3,17 @@
   <link rel="stylesheet" type="text/css" href="homeS.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <nav>
-  <a href="home.html">HOME</a>
-  <a href="blt.html">DAY</a>
-  <a href="wk.html">WEEK</a>
-  <!--
+    <a href="home.html">HOME</a>
+    <a href="blt.html">DAY</a>
+    <a href="wk.html">WEEK</a>
+    <!--
   <a href="#">MONTH</a>
   <a href="#">CATEGORIES</a>-->
-  <a href="faq.html">FAQ</a>
-  someone's calendar
-  <div class="search-wrapper">
+    <a href="faq.html">FAQ</a> someone's calendar
+    <div class="search-wrapper">
 
-   </div>
-</nav>
+    </div>
+  </nav>
 </head>
 <body window.onload="current()", "close2", "close1"> <!-- loads current date to date displays -abc-->
  <div class = "calendar table-responsive">
@@ -74,34 +73,29 @@
   <li>30</li>
   <li>31</li>
 
-  <!--quote generator- kate -->
+      <!--quote generator- kate -->
 
- </div>
-
-</ul>
-<!--alerts-->
-<div class="quoty">
-  <div class="quote" id="quoteDisplay"></div>
-  <button onclick="newQuote()">New Quote</button>
-</div>
-
-<!-- taskbar css -->
-<div class="sidebar">
-  <div class="header">
-    <h1 class = "heading">Tasks</h1>
-<!--     <input type="text" id="myInput" placehoder="Create a task">
-    <span onclick="newElement()" class="addBtn">Add</span> -->
   </div>
 
-  <ul id="myUL">
-     <li>Test 1 </li>
-     <li class="checked">Test 2 </li>
-     <li>Test 3 </li>
   </ul>
-  <div class="header">
-    <input type="text" id="myInput" placeholder="Create a task">
-   <span onclick="newElement()" class="addBtn">ADD TASK</span>
-   </div>
+  <!--alerts-->
+  <div class="quoty">
+    <div class="quote" id="quoteDisplay"></div>
+    <button onclick="newQuote()">New Quote</button>
+  </div>
+
+  <!-- taskbar html - Victoria -->
+  <div class="sidebar">
+    <div class="header">
+      <h1>Tasks</h1>
+      <input type="text" id="myInput" placeholder="Create a task...">
+      <span onclick="newElement()" class="addBtn">ADD TASK</span>
+    </div>
+    <ul id="myUL">
+      <li class="checked taskitem">Test 1 </li>
+      <li class="taskitem">Test 2 </li>
+      <li class="taskitem">Test 3 </li>
+    </ul>
   </div>
   <script src="homeJ.js"></script>
   <footer></footer>
