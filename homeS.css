@@ -269,3 +269,169 @@ section {
 .tak {
   color: black;
 }
+.flex-container {
+  float: right;
+  flex-direction:column;
+  align-items: center;
+  padding-top: 270px;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
+
+
+
+.color-panel{
+    width: 30%;
+    height:30px;
+    background: white;
+    border-bottom-color: gray;
+    border-bottom-style: solid;
+    display: none;
+}
+.palette{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.cbutton.one{
+    flex: 1;
+    background: #99ccff;
+    cursor: pointer;
+}
+.cbutton.two{
+    flex-grow: 1;
+    background: #cc99ff;
+    cursor: pointer;
+}
+.cbutton.three{
+    flex-grow: 1;
+    background: white;
+    cursor: pointer;
+}
+.cbutton.four{
+    flex-grow: 1;
+    background: #FFFFA5;
+    cursor: pointer;
+}
+.cbutton.five{
+    flex-grow: 1;
+    background: #ff9999;
+    cursor: pointer;
+}
+
+.cbutton:hover{
+    border-color: gray;
+    border-style: solid;
+    border-width: thin;
+}
+
+.center-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+    border-bottom-color: #404040;
+    min-height: 30px;
+    width: 30%;
+    background: white;
+}
+
+.notes-list-container{
+    height: 50%;
+    min-height: 50px;
+    width: 30%;
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+    border-top-style: none;
+    background: white;
+    overflow-y: auto;
+}
+
+.button{
+  cursor: pointer;
+  display: block;
+  color: #404040;
+  width: 1em;
+  height: 1em;
+  font-weight: 900;
+  font-size: 0.9em;
+  text-align:center;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border-radius: 50px;
+  transition-duration:0.4s;
+}
+
+.button.color{
+    display: none;
+}
+.button.done{
+    display: none;
+}
+.button.delete{
+    display: none;
+}
+
+.button:hover {
+  color:#e9e0e9;
+}
+
+#notes ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#notes li {
+    position:relative;
+    border-bottom: 1px dotted black;
+    padding: 10px 40px 10px 10px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paper-container {
+  display: none;
+  height: 50%;
+  width:30%;
+  min-height:50px;
+  max-height: 50%;
+  min-width: 30%;
+  border-color: black;
+  border-style: solid;
+}
+
+#notes li span{
+    position: absolute;
+    padding: 4px 4px 4px 4px;
+    top: 5px;
+    right: 4px;
+    text-align: center;
+    color: red;
+    width: 10px;
+}
+
+#notes li span:hover{
+    color:#e9e0e9;
+}
+
+#notes li:hover{
+    border-bottom-color: black;
+    border-style: solid;
+    border-width: medium;
+}
+
+textarea{
+  height: 100%s;
+  width: 100%;
+  resize: none;
+}
