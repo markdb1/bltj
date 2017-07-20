@@ -106,11 +106,14 @@ nav a:hover {
 }
 
 .header {
-  background-color: #1abc9c;
   padding: 5px 30px;
   color: white;
   text-align: center;
   font-family: 'Lobster', cursive;
+}
+
+.hed {
+  color:black;
 }
 
 /* clear floats after header */
@@ -173,4 +176,9 @@ input {
 #drag-me::before {
   content: "#" attr(id);
   font-weight: bold;
+}
+
+.plus {
+  width: 50%;
+  height: 3%;
 }
