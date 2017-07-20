@@ -237,14 +237,30 @@ input {
 /*Quote css*/
 .quoty {
   position: fixed;
-  bottom: 25;
+  bottom: 10px;
   width: 100%;
   font-family: 'Lobster', cursive;
   font-size: 50px;
 }
 
-.quote {
+.quoteBtn {
+  font-family: 'Lobster', cursive;
+  width: 7%;
+  height: 3%;
+  background: #1abc9c;
+  color: black;
+  float: left;
   text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  }
+  .quoteBtn:hover {
+    background-color: #bbb;
+  }
+}
+.quote {
+  text-align: left;
 }
 /*quote generator*/
 section p, .container-fluid {
