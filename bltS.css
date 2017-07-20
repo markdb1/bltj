@@ -157,11 +157,15 @@ input {
   margin: 10px 200px 200px 50px;
 }
 
+.hstk {
+  width: 50px;
+  height: 50px;
+}
 #drag-1, #drag-2 {
   width: 50px;
   height: 50px;
   min-height: 6.5em;
-  margin: 10%;
+  margin: 8%;
 
   border-radius: 0.75em;
   padding: 4%;
