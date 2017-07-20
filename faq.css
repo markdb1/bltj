@@ -36,9 +36,22 @@ p1, p2, p3 {
   padding: 14px;
   text-decoration: none;
   font-size: 20px;
-  font-family: cursive;
+  font-family: sans-serif;
 }
 
 body {
     background-color: mistyrose;
+}
+
+.about {
+  font-family: serif;
+}
+
+.pcb {
+  width: 5%;
+  height: 6%;
+}
+
+.abc {
+  font-family: 'Lobster', cursive;
 }
