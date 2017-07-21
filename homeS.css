@@ -333,24 +333,24 @@ section {
     background: white;
     cursor: pointer;
 }
-.cbutton.four{
+.cbutton.four {
     flex-grow: 1;
     background: #FFFFA5;
     cursor: pointer;
 }
-.cbutton.five{
+.cbutton.five {
     flex-grow: 1;
     background: #ff9999;
     cursor: pointer;
 }
 
-.cbutton:hover{
+.cbutton:hover {
     border-color: gray;
     border-style: solid;
     border-width: thin;
 }
 
-.center-header{
+.center-header {
   text-align: center;
   font-family: 'Lobster', cursive;
   font-size: 20px;
@@ -370,7 +370,7 @@ section {
     background: #1abc9c;
 }
 
-.notes-list-container{
+.notes-list-container {
     height: 50%;
     min-height: 50px;
     width: 50%;
@@ -382,7 +382,7 @@ section {
     overflow-y: auto;
 }
 
-.button{
+.button {
   cursor: pointer;
   display: block;
   color: #404040;
@@ -446,17 +446,17 @@ section {
     width: 10px;
 }
 
-#notes li span:hover{
+#notes li span:hover {
     color:#e9e0e9;
 }
 
-#notes li:hover{
+#notes li:hover {
     border-bottom-color: black;
     border-style: solid;
     border-width: medium;
 }
 
-textarea{
+textarea {
   height: s;
   width: 50%;
   resize: none;

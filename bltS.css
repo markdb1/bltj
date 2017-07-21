@@ -48,7 +48,6 @@ nav a:hover {
   color: grey;
   margin: 0;
   padding: 0;
-  list-style-type: none;
   /*   font-family: 'Sue Ellen Francisco', cursive; */
   /*   font-family: 'Crafty Girls', cursive; */
   font-family: 'Handlee', cursive;
@@ -81,6 +80,7 @@ nav a:hover {
 /* adds check mark/strike out/background color when clicked*/
 #myUL li.checked {
   /*background: #bbb;*/
+  list-style-type: none;
   color: dimgrey;
   text-decoration: line-through;
 }
