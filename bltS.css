@@ -50,7 +50,7 @@ nav a:hover {
   padding: 0;
   /*   font-family: 'Sue Ellen Francisco', cursive; */
   /*   font-family: 'Crafty Girls', cursive; */
-  /*   font-family: 'Handlee', cursive; */
+  font-family: 'Handlee', cursive;
   /*   font-family: 'Caveat', cursive; */
 }
 
@@ -130,10 +130,10 @@ input {
  padding: 2%;
  float: left;
  font-size: 19px;
- /*   font-family: 'Sue Ellen Francisco', cursive; */
- /*   font-family: 'Crafty Girls', cursive; */
- /*   font-family: 'Handlee', cursive; */
- /*   font-family: 'Caveat', cursive; */
+ /*font-family: 'Sue Ellen Francisco', cursive; */
+ /*font-family: 'Crafty Girls', cursive; */
+ font-family: 'Handlee', cursive;
+ /*font-family: 'Caveat', cursive; */
 }
 
 /* Button to add the tasks */
@@ -154,11 +154,13 @@ input {
 
 .sidebar {
   float: left;
+  width: 49%;
   transform: translate(10% 50%);
 }
 
 .sidebar2 {
   float: right;
+  width:49%;
   margin: 1px 2px 2px 5px;
 }
 
@@ -222,8 +224,7 @@ input {
 }
 
 .stack1{
-  float: left;
-  overflow: visible;
-  position: fixed;
-  z-index: 1000;
+  position: absolute;
+    left: 100px;
+    top: 150px;
 }
