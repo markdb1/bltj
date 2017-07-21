@@ -1,129 +1,134 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-</script>
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
   <link rel="stylesheet" type="text/css" href="bltS.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Sue+Ellen+Francisco|Crafty+Girls|Handlee|Caveat" rel="stylesheet">
   <nav>
-  <a href="home.html">HOME</a>
-  <a href="blt.html">DAY</a>
-  <a href="wk.html">WEEK</a>
-<!--  <a href="#">HOME</a>
+    <a href="home.html">HOME</a>
+    <a href="blt.html">DAY</a>
+    <a href="wk.html">WEEK</a>
+    <!--  <a href="#">HOME</a>
   <a href="#">CATEGORIES</a>-->
-  <a href="faq.html">FAQ</a>
-  someone's calendar
+    <a href="faq.html">FAQ</a>
+    someone's calendar
 
-  <div class="search-wrapper">
-   </div>
-</nav>
+    <div class="search-wrapper">
+    </div>
+  </nav>
 </head>
+
 <body>
-<div class="container centered">
-   <!-- current date display for page header -abc -->
-  <p class= "month" id="m1"></p>
-  <p class="day" id="d1"></p>
-  <div class="sidebar col-md-8">
-    <div class="header">
-      <h1 class="hed"id="day"></h1>
-      <input type="text" id="myInput" placeholder="Create a task...">
-      <span onclick="newElement()" class="addBtn"><img class="plus"src="http://www.iconsdb.com/icons/download/white/plus-5-512.png" alt="plus icon"></span>
+  <div class="container centered">
+    <!-- current date display for page header -abc -->
+    <p class="month" id="m1"></p>
+    <p class="day" id="d1"></p>
+
+    <!-- sidebar stuff VC -->
+    <div class="sidebar col-md-8">
+      <div class="header">
+        <h1 id="day"></h1>
+      </div>
+      <ul id="myUL">
+        <li class="checked taskitem">Test 1 </li>
+        <li class="taskitem">Test 2 </li>
+        <li class="taskitem">Test 3 </li>
+      </ul>
+      <div>
+        <input type="text" id="myInput" placeholder="Create a task...">
+        <span onclick="newElement()" class="addBtn">+</span>
+      </div>
     </div>
-    <ul id="myUL" >
+    <div class="sidebar2 col-md-8">
+      <div class="header">
+      <h1 id="nday"></h1>
+    </div>
+    <ul id="myUL">
       <li class="checked taskitem">Test 1 </li>
       <li class="taskitem">Test 2 </li>
       <li class="taskitem">Test 3 </li>
     </ul>
+    <input type="text" id="myInput" placeholder="Create a task...">
+    <span onclick="newElement()" class="addBtn">+</span>
   </div>
-  <div class="sidebar2 col-md-8">
-    <div class="header">
-      <h1 class="hed" id="nday"></h1>
-      <input type="text" id="myInput" placeholder="Create a task...">
-      <span onclick="newElement()" class="addBtn"><img class="plus"src="http://www.iconsdb.com/icons/download/white/plus-5-512.png" alt="plus icon"></span>
-    </div>
-    <ul id="myUL" >
-      <li class="checked taskitem">Test 1 </li>
-      <li class="taskitem">Test 2 </li>
-      <li class="taskitem">Test 3 </li>
-    </ul>
+
+  <!-- working on stickers -abc -->
+  <div id="drag-1" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
   </div>
-</div>
-    <!-- working on stickers -abc -->
-    <div id="drag-1" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
-    </div>
-    <div id="drag-2" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
-    </div>
-    <div id="drag-3" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
-    </div>
-    <div id="drag-4" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
-    </div>
-    <div id="drag-5" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
-    </div>
-    <div id="drag-6" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
-    </div>
-    <div id="drag-7" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
-    </div>
-    <div id="drag-8" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
-    </div>
-    <div id="drag-9" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
-    </div>
-    <div id="drag-10" class="draggable">
-      <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
-    </div>
-    <div id="drag-11" class="draggable">
-      <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
-    </div>
-    <div id="drag-12" class="draggable">
-      <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
-    </div>
-    <div id="drag-13" class="draggable">
-      <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
-    </div>
-    <div id="drag-14" class="draggable">
-      <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
-    </div>
-    <div id="drag-15" class="draggable">
-      <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
-    </div>
-    <div id="drag-16" class="draggable">
-      <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
-    </div>
-    <div id="drag-17" class="draggable">
-      <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
-    </div>
-    <div id="drag-18" class="draggable">
-      <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
-    </div>
-    <div id="drag-19" class="draggable">
-      <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
-    </div>
-    <div id="drag-20" class="draggable">
-      <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
-    </div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.9/interact.min.js"></script>
-<script src="bltJ.js"></script>
-<script src="jquery-3.2.1.min.js"></script>
-<!-- <script src="interact.js"></script> -->
-<footer></footer>
+  <div id="drag-2" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
+  </div>
+  <div id="drag-3" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
+  </div>
+  <div id="drag-4" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
+  </div>
+  <div id="drag-5" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/512/35/35538.png" alt="love heart icon">
+  </div>
+  <div id="drag-6" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
+  </div>
+  <div id="drag-7" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
+  </div>
+  <div id="drag-8" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
+  </div>
+  <div id="drag-9" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
+  </div>
+  <div id="drag-10" class="draggable">
+    <img class="hstk" src="https://image.flaticon.com/icons/png/128/59/59720.png" alt="star icon">
+  </div>
+  <div id="drag-11" class="draggable">
+    <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
+  </div>
+  <div id="drag-12" class="draggable">
+    <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
+  </div>
+  <div id="drag-13" class="draggable">
+    <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
+  </div>
+  <div id="drag-14" class="draggable">
+    <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
+  </div>
+  <div id="drag-15" class="draggable">
+    <img class="hstk" src="http://www.onlygfx.com/wp-content/uploads/2016/12/arrow-drawing-2.png" alt="arrow icon">
+  </div>
+  <div id="drag-16" class="draggable">
+    <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
+  </div>
+  <div id="drag-17" class="draggable">
+    <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
+  </div>
+  <div id="drag-18" class="draggable">
+    <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
+  </div>
+  <div id="drag-19" class="draggable">
+    <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
+  </div>
+  <div id="drag-20" class="draggable">
+    <img class="hstk" src="http://www.myiconfinder.com/uploads/iconsets/128-128-7a2b79a0684977101997348a4938d1f2.png" alt="pencil icon">
+  </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.9/interact.min.js"></script>
+  <script src="bltJ.js"></script>
+  <script src="jquery-3.2.1.min.js"></script>
+  <!-- <script src="interact.js"></script> -->
+  <footer></footer>
