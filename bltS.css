@@ -239,3 +239,8 @@ input {
   position: absolute;
   transform: translateX(-7vw) translateY(30vh);
 }
+
+.stack5{
+  position: absolute;
+  transform: translateX(-7vw) translateY(40vh);
+}
