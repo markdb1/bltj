@@ -304,7 +304,7 @@ section {
 
 
 .color-panel{
-    height:30px;
+    height:0px;
     background: white;
     border-bottom-color: gray;
     border-bottom-style: solid;
@@ -351,6 +351,8 @@ section {
 }
 
 .center-header{
+  text-align: center;
+  font-family: 'Lobster', cursive;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -359,9 +361,9 @@ section {
     border-style: solid;
     border-width: thin;
     border-bottom-color: #404040;
-    min-height: 30px;
+    min-height: 40px;
     width:50%;
-    background: white;
+    background: #1abc9c;
 }
 
 .notes-list-container{
