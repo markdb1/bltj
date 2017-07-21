@@ -332,7 +332,7 @@ section {
     background: white;
     cursor: pointer;
 }
-<<<<<<< HEAD
+
 .cbutton.four{
     flex-grow: 1.5;
     background: #FFFFA5;
@@ -340,7 +340,7 @@ section {
 }
 .cbutton.five{
     flex-grow: 1.5;
-=======
+}
 .cbutton.four {
     flex-grow: 1;
     background: #FFFFA5;
@@ -348,7 +348,6 @@ section {
 }
 .cbutton.five {
     flex-grow: 1;
->>>>>>> 1e937974b9606eb03dd328d06d1e329fa6b7da12
     background: #ff9999;
     cursor: pointer;
 }
