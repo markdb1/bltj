@@ -196,3 +196,10 @@ input {
   margin-top: -50px;
   margin-left: -100px;
 }
+
+.stack1{
+  float: left;
+  overflow: visible;
+  position: fixed;
+  z-index: 1000;
+}
