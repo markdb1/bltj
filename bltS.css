@@ -165,10 +165,10 @@ input {
   width: 50px;
   height: 50px;
   min-height: 6.5em;
-  margin: .5%;
+  margin: .1%;
 
   border-radius: 0.75em;
-  padding: 4%;
+  padding: 2%;
 
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
@@ -177,6 +177,10 @@ input {
 #drag-me::before {
   content: "#" attr(id);
   font-weight: bold;
+}
+
+.draggable {
+ width: 50%;
 }
 
 .plus {
