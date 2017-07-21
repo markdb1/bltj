@@ -1,11 +1,3 @@
-nav a {
-  color: black;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  font-size: 30px;
-  font-family: 'Lobster', cursive;
-}
 nav {
   color: black;
   text-align: left;
@@ -14,9 +6,28 @@ nav {
   font-size: 30px;
   font-family: 'Lobster', cursive;
 }
+nav a {
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}
+/*nav bar cont*/
 nav a:hover {
   background: grey;
 }
+/* the "someone's calendar"*/
+div someone {
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}
+
 
 h1, h2, h3 {
   color: black;

@@ -289,28 +289,33 @@ section {
   float: right;
   flex-direction:column;
   align-items: center;
-  padding-top: 270px;
-  top:0;
-  right:0;
-  left:0;
-  bottom:0;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 30px;
+
+  clear: both;
+}
+
+.post {
+  width: 50%;
 }
 
 
 
 .color-panel{
-    width: 30%;
     height:30px;
     background: white;
     border-bottom-color: gray;
     border-bottom-style: solid;
     display: none;
+    width: 50%;
 }
 .palette{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }
 
 .cbutton.one{
@@ -355,14 +360,14 @@ section {
     border-width: thin;
     border-bottom-color: #404040;
     min-height: 30px;
-    width: 30%;
+    width:50%;
     background: white;
 }
 
 .notes-list-container{
     height: 50%;
     min-height: 50px;
-    width: 30%;
+    width: 50%;
     border-style: solid;
     border-width: thin;
     border-color: white;
@@ -375,7 +380,7 @@ section {
   cursor: pointer;
   display: block;
   color: #404040;
-  width: 1em;
+  width: 50%;
   height: 1em;
   font-weight: 900;
   font-size: 0.9em;
@@ -418,12 +423,11 @@ section {
 .paper-container {
   display: none;
   height: 50%;
-  width:30%;
+  width:100%;
   min-height:50px;
   max-height: 50%;
-  min-width: 30%;
-  border-color: black;
-  border-style: solid;
+  min-width: 50%;
+
 }
 
 #notes li span{
@@ -447,7 +451,7 @@ section {
 }
 
 textarea{
-  height: 100%s;
-  width: 100%;
+  height: s;
+  width: 50%;
   resize: none;
 }
