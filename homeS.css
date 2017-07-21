@@ -353,14 +353,18 @@ section {
 .center-header{
   text-align: center;
   font-family: 'Lobster', cursive;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 15px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-color: blue;
+    border-color: grey;
     border-style: solid;
     border-width: thin;
-    border-bottom-color: #404040;
+    border-bottom-color: grey;
     min-height: 40px;
     width:50%;
     background: #1abc9c;
