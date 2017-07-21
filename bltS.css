@@ -25,7 +25,7 @@ nav a {
   font-size: 30px;
   font-family: 'Lobster', cursive;
 }
-/*nav bar cont*/
+
 nav a:hover {
   background: mistyrose;
 }
@@ -49,13 +49,17 @@ nav a:hover {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  /*   font-family: 'Sue Ellen Francisco', cursive; */
+  /*   font-family: 'Crafty Girls', cursive; */
+  /*   font-family: 'Handlee', cursive; */
+  /*   font-family: 'Caveat', cursive; */
 }
 
 #myUL li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #f9f9f9;
+  background: none;
   font-size: 18px;
   transition: 0.2s;
 
@@ -67,7 +71,7 @@ nav a:hover {
 }
 
 #myUL li:nth-child(odd) {
-  background: #f9f9f9;
+  background: none;
 }
 
 #myUL li:hover {
@@ -76,7 +80,7 @@ nav a:hover {
 
 /* adds check mark/strike out/background color when clicked*/
 #myUL li.checked {
-  background: #bbb;
+  /*background: #bbb;*/
   color: dimgrey;
   text-decoration: line-through;
 }
@@ -107,13 +111,9 @@ nav a:hover {
 
 .header {
   padding: 5px 30px;
-  color: white;
+  color: black;
   text-align: center;
   font-family: 'Lobster', cursive;
-}
-
-.hed {
-  color:black;
 }
 
 /* clear floats after header */
@@ -124,22 +124,27 @@ nav a:hover {
 }
 
 input {
-  border: none;
-  width: 75%;
-  padding: 4%;
-  float: left;
-  font-size: 16px;
+ border: none;
+ background: none;
+ width: 80%;
+ padding: 2%;
+ float: left;
+ font-size: 19px;
+ /*   font-family: 'Sue Ellen Francisco', cursive; */
+ /*   font-family: 'Crafty Girls', cursive; */
+ /*   font-family: 'Handlee', cursive; */
+ /*   font-family: 'Caveat', cursive; */
 }
 
 /* Button to add the tasks */
 .addBtn {
-  padding: 1%;
-  width: 25%;
+  width: 20%;
+  padding: 3.4%;
   background: dimgrey;
+  font-size: 20px;
   color: white;
   float: left;
   text-align: center;
-  font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -149,7 +154,7 @@ input {
 
 .sidebar {
   float: left;
-  transform: translate(10% 50%)
+  transform: translate(10% 50%);
 }
 
 .sidebar2 {
@@ -161,14 +166,33 @@ input {
   width: 50px;
   height: 50px;
 }
-#drag-1, #drag-2, #drag-3, #drag-4, #drag-5, #drag-6, #drag-7, #drag-8, #drag-9, #drag-10, #drag-11, #drag-12, #drag-13, #drag-14, #drag-15, #drag-16, #drag-17, #drag-18, #drag-19, #drag-20, {
+#drag-1,
+#drag-2,
+#drag-3,
+#drag-4,
+#drag-5,
+#drag-6,
+#drag-7,
+#drag-8,
+#drag-9,
+#drag-10,
+#drag-11,
+#drag-12,
+#drag-13,
+#drag-14,
+#drag-15,
+#drag-16,
+#drag-17,
+#drag-18,
+#drag-19,
+#drag-20 {
   width: 50px;
   height: 50px;
   margin: 0%;
   padding: 2%;
 
   -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
 }
 
 #drag-me::before {
@@ -177,7 +201,7 @@ input {
 }
 
 .draggable {
- width: 5%;
+  width: 5%;
 }
 
 .plus {
