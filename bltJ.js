@@ -142,7 +142,7 @@ function checkoff2() {
 checkoff2();
 
 // create a new list item when add is clicked
-function newElement() {
+function newElement2() {
   var li = document.createElement("li");
   li.className = "taskitem2"; //trying to put the newly created li into a class
   var inputValue = document.getElementById("myInput2").value;
