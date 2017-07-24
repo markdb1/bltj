@@ -3,103 +3,104 @@
   <meta name="google-signin-client_id" content="398621332572-nhab6e6mk426c9ki64jaloisdbg723v2.apps.googleusercontent.com">
   <link rel="stylesheet" type="text/css" href="homeS.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <nav>
     <a href="home.html">HOME</a>
     <a href="blt.html">DAY</a>
-<!--
+    <!--
     <a href="wk.html">WEEK</a>
 
   <a href="#">MONTH</a>
   <a href="#">CATEGORIES</a>-->
-    <a href="faq.html">FAQ</a> someone's calendar
+    <a href="faq.html">FAQ</a> Your Calendar
     <div class="search-wrapper">
 
     </div>
   </nav>
 </head>
-<body onload="current()", "close2", "close1"> <!-- loads current date to date displays -abc-->
+
+<body onload="current()" , "close2", "close1">
+  <!-- loads current date to date displays -abc-->
+  <!-- Google signin -->
   <div id="my-signin2" align="right"></div>
   <script>
     function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      console.log("Logged in as: " + googleUser.getBasicProfile().getName());
     }
     function onFailure(error) {
       console.log(error);
     }
     function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
+      gapi.signin2.render("my-signin2", {
+        scope: "profile email",
+        width: 240,
+        height: 50,
+        longtitle: true,
+        theme: "dark",
+        onsuccess: onSuccess,
+        onfailure: onFailure
       });
     }
   </script>
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
- <div class = "calendar table-responsive">
-  <header></header>
-   <!-- calendar config -abc -->
-  <div class="month">
-    <p class="dt" id="mnth"></p>
-    <p class="dt" id="yr"></p>
-</div>
+  <div class="calendar table-responsive">
+    <header></header>
+    <!-- calendar config -abc -->
+    <div class="month">
+      <p class="dt" id="mnth"></p>
+      <p class="dt" id="yr"></p>
+    </div>
 
-<ul class="weekdays col-xs-12 col-md-8">
-  <li>Sunday</li>
-  <li>Monday</li>
-  <li>Tuesday</li>
-  <li>Wednsday</li>
-  <li>Thursday</li>
-  <li>Friday</li>
-  <li>Saturday</li>
-</ul>
+    <ul class="weekdays col-xs-12 col-md-8">
+      <li>Sunday</li>
+      <li>Monday</li>
+      <li>Tuesday</li>
+      <li>Wednsday</li>
+      <li>Thursday</li>
+      <li>Friday</li>
+      <li>Saturday</li>
+    </ul>
 
-<ul class="days">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li>10</li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <a href = "blt.html"><li><span class="active">24</span></li></a>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
-
-      <!--quote generator- kate -->
-
+    <ul class="days">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <a href="blt.html">
+        <li><span class="active">24</span></li>
+      </a>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
   </div>
-
   </ul>
-  <!--alerts-->
+    <!--quote generator- kate -->
   <div class="quoty">
     <div class="quote" id="quoteDisplay"></div>
-    <button class= "quoteBtn" onclick="newQuote()">New Quote</button>
+    <button class="quoteBtn" onclick="newQuote()">New Quote</button>
   </div>
 
   <!-- taskbar html - Victoria -->
@@ -118,29 +119,29 @@
 
   <!-- Notes -->
   <div class="flex-container post">
-            <div class="color-panel">
-                <div class="palette">
-                    <div class="cbutton one"></div>
-                    <div class="cbutton two"></div>
-                    <div class="cbutton three"></div>
-                    <div class="cbutton four"></div>
-                    <div class="cbutton five"></div>
-                </div>
-            </div>
-            <div class="center-header">
-                <span title="Create a Note" class="button create">NOTES+</span>
-                <span class="button done">&#10003</span>
-                <span title="Pick Note color" class="button color">C</span>
-                <span title="Delete current Note" class="button delete">X</span>
-            </div>
-            <div class="paper-container post">
-                <textarea></textarea>
-            </div>
+    <div class="color-panel">
+      <div class="palette">
+        <div class="cbutton one"></div>
+        <div class="cbutton two"></div>
+        <div class="cbutton three"></div>
+        <div class="cbutton four"></div>
+        <div class="cbutton five"></div>
+      </div>
+    </div>
+    <div class="center-header">
+      <span title="Create a Note" class="button create">NOTES+</span>
+      <span class="button done">&#10003</span>
+      <span title="Pick Note Color" class="button color">C</span>
+      <span title="Delete current Note" class="button delete">X</span>
+    </div>
+    <div class="paper-container post">
+      <textarea></textarea>
+    </div>
 
-            <div class="notes-list-container post">
-                <ul class="notes-list post"></ul>
-            </div>
-        </div>
+    <div class="notes-list-container post">
+      <ul class="notes-list post"></ul>
+    </div>
+  </div>
 
   <script src="homeJ.js"></script>
   <footer></footer>
