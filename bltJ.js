@@ -95,6 +95,80 @@ function newElement() {
   }
   closeitem();
 }
+//taskbar2
+function closebtn2() {
+  //changed the document.getElementsByTagName to getElementsByClassName
+  var myNodelist = document.getElementsByClassName("taskitem2");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+}
+
+closebtn2();
+
+// close button to hide current list item
+function closeitem2() {
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
+}
+
+closeitem2();
+
+// checked symbol when clicked
+function checkoff2() {
+  var list = document.querySelector("#myUL2");
+  list.addEventListener(
+    "click",
+    function(ev) {
+      if (ev.target.tagName === "LI") {
+        ev.target.classList.toggle("checked");
+      }
+    },
+    false
+  );
+}
+
+checkoff2();
+
+// create a new list item when add is clicked
+function newElement() {
+  var li = document.createElement("li");
+  li.className = "taskitem2"; //trying to put the newly created li into a class
+  var inputValue = document.getElementById("myInput2").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === "") {
+    alert("Please write something.");
+  } else {
+    document.getElementById("myUL2").appendChild(li);
+  }
+  document.getElementById("myInput2").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
+  closeitem2();
+}
 
 // sticker testing
 // target elements with the "draggable" class

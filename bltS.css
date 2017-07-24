@@ -97,6 +97,60 @@ nav a:hover {
   width: 7px;
 }
 
+#myUL2 {
+  /*   removing margins and the padding from taskbar */
+  color: grey;
+  margin: 0;
+  padding: 0;
+  /*   font-family: 'Sue Ellen Francisco', cursive; */
+  /*   font-family: 'Crafty Girls', cursive; */
+  font-family: 'Handlee', cursive;
+  /*   font-family: 'Caveat', cursive; */
+}
+
+#myUL2 li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: none;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /*make list items unselectable*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#myUL2 li:nth-child(odd) {
+  background: none;
+}
+
+#myUL2 li:hover {
+  background: mistyrose;
+}
+
+/* adds check mark/strike out/background color when clicked*/
+#myUL2 li.checked {
+  /*background: #bbb;*/
+  list-style-type: none;
+  color: dimgrey;
+  text-decoration: line-through;
+}
+#myUL2 li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: grey;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
 /* style the close button */
 .close {
   position: absolute;
