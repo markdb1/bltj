@@ -136,7 +136,7 @@ input {
 /* Button to add the tasks */
 .addBtn {
   width: 20%;
-  padding: 3.4%;
+  padding: 2.7%;
   background: dimgrey;
   font-size: 20px;
   color: white;
@@ -152,13 +152,14 @@ input {
 .sidebar {
   float: left;
   width: 49%;
-  transform: translate(10% 50%);
+  transform: translate(20% 50%);
 }
 
 .sidebar2 {
   float: right;
   width:47%;
-  margin: 1px 2px 2px 5px;
+  transform: translate(55% 50%);
+  /*margin: 1px 2px 2px 5px;*/
 }
 
 .hstk {
