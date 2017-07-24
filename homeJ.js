@@ -18,11 +18,11 @@ function current() {
   var y = d.getFullYear();
   document.getElementById("mnth").innerHTML = n;
   document.getElementById("yr").innerHTML = y;
-  var currentSeconds = $.now().getSeconds();
-  //trying to set up alerts at given time -abc
-  if (d == eventTime) {
-    alert("test");
-  }
+  // var currentSeconds = $.now().getSeconds();
+  // //trying to set up alerts at given time -abc
+  // if (d == eventTime) {
+  //   alert("test");
+  // }
 }
 
 // taskbar js - Victoria
