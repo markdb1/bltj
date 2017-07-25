@@ -15,7 +15,7 @@ body {
 
 
 yo {
-  float: right;
+  /*float: right;*/
 font-size: 35px;
 color: #1abc9c;
 }
@@ -129,7 +129,7 @@ div someone {
   position: absolute;
     top: 10%;
     right: .5%;
-  width: 24%;
+  width: 25%;
 }
 
 .header {
@@ -308,7 +308,7 @@ section {
   position: relative;
     bottom: 0%;
     left: 75%;
-  width: 22%;
+  width: 25%;
   flex-direction:column;
   align-items: center;
   cursor: pointer;
