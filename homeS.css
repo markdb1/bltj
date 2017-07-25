@@ -122,15 +122,24 @@ div someone {
 }
 
 /*taskbar css*/
+.taskbar {
+  width: 100%;
+  position: fixed;
+    top: 10%;
+    left: 74%;
+    /*top: 10%;
+    right: 50%;*/
 
+}
 .sidebar {
   /*float: right;*/
   font-family: "Handlee", cursive;
-  position: absolute;
-    top: 10%;
-    right: .5%;
+  position: relative;
+    /*top: 10%;
+    right: .5%;*/
   width: 25%;
 }
+
 
 .header {
   background-color: #1abc9c;
@@ -306,8 +315,8 @@ section {
 
 .flex-container {
   position: relative;
-    bottom: 0%;
-    left: 75%;
+    /*bottom: 0%;
+    left: 75%;*/
   width: 25%;
   flex-direction:column;
   align-items: center;
@@ -378,7 +387,7 @@ section {
   text-align: center;
   font-family: 'Acme', sans-serif;
   font-size: 30px;
-  color: black;
+  color: #eee;
   padding-bottom: 25px;
 
     display: flex;
@@ -409,7 +418,7 @@ section {
 .button {
   cursor: pointer;
   display: block;
-  color: #404040;
+  color: black;
   width: 100%;
   height: 1em;
   font-weight: 900;
@@ -431,7 +440,7 @@ section {
 }
 
 .button:hover {
-  color:#e9e0e9;
+  color:dimgrey;
 }
 
 #notes ul{
@@ -453,9 +462,9 @@ section {
   display: none;
   height: 50%;
   width:100%;
-  min-height:50px;
+  /*min-height:50px;
   max-height: 50%;
-  min-width: 100%;
+  min-width: 100%;*/
 
 }
 

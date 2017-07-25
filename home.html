@@ -66,7 +66,7 @@
 </head>
 
 <body onload="current()" , "close2", "close1">
-  
+
   <!-- loads current date to date displays -abc-->
   <div class="calendar table-responsive">
     <header></header>
@@ -133,44 +133,46 @@
   </div>
 
   <!-- taskbar html - Victoria -->
-  <div class="sidebar">
-    <div class="header">
-      <h1 class="tak">Tasks</h1>
-      <input type="text" id="myInput" placeholder="Create a task...">
-      <span onclick="newElement()" title= "Add a Task" class="addBtn">ADD TASK</span>
+  <div class=taskbar>
+    <div class="sidebar">
+      <div class="header">
+        <h1 class="tak">Tasks</h1>
+        <input type="text" id="myInput" placeholder="Create a task...">
+        <span onclick="newElement()" title= "Add a Task" class="addBtn">ADD TASK</span>
+      </div>
+      <ul id="myUL">
+        <li class="checked taskitem">Test 1 </li>
+        <li class="taskitem">Test 2 </li>
+        <li class="taskitem">Test 3 </li>
+      </ul>
     </div>
-    <ul id="myUL">
-      <li class="checked taskitem">Test 1 </li>
-      <li class="taskitem">Test 2 </li>
-      <li class="taskitem">Test 3 </li>
-    </ul>
-  </div>
 
-  <!-- Notes -->
-  <div class="flex-container post">
-    <div class="color-panel">
-      <div class="palette">
-        <div class="cbutton one"></div>
-        <div class="cbutton two"></div>
-        <div class="cbutton three"></div>
-        <div class="cbutton four"></div>
-        <div class="cbutton five"></div>
+    <!-- Notes -->
+    <div class="flex-container post">
+      <div class="color-panel">
+        <div class="palette">
+          <div class="cbutton one"></div>
+          <div class="cbutton two"></div>
+          <div class="cbutton three"></div>
+          <div class="cbutton four"></div>
+          <div class="cbutton five"></div>
+        </div>
+      </div>
+      <div class="center-header">
+        <span title="Create a Note" class="button create">NOTES+</span>
+        <span class="Done Button">&#10003</span>
+        <span title="Pick Note Color" class="button color">C</span>
+        <span title="Delete Current Note" class="button delete">X</span>
+      </div>
+      <div class="paper-container post">
+        <textarea></textarea>
+      </div>
+
+      <div class="notes-list-container post">
+        <ul class="notes-list post"></ul>
       </div>
     </div>
-    <div class="center-header">
-      <span title="Create a Note" class="button create">NOTES+</span>
-      <span class="Done Button">&#10003</span>
-      <span title="Pick Note Color" class="button color">C</span>
-      <span title="Delete Current Note" class="button delete">X</span>
-    </div>
-    <div class="paper-container post">
-      <textarea></textarea>
-    </div>
-
-    <div class="notes-list-container post">
-      <ul class="notes-list post"></ul>
-    </div>
-  </div>
+</div>
 
   <script src="homeJ.js"></script>
   <footer></footer>
