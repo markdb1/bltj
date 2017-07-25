@@ -13,13 +13,6 @@ body {
   font-family: 'Lobster', cursive;
 }
 
-.sidebar {
-  /*float: right;*/
-  position: absolute;
-    top: 10%;
-    right: .5%;
-  width: 24%;
-}
 
 yo {
 font-size: 35px;
@@ -127,6 +120,14 @@ div someone {
 }
 
 /*taskbar css*/
+
+.sidebar {
+  /*float: right;*/
+  position: absolute;
+    top: 10%;
+    right: .5%;
+  width: 24%;
+}
 
 .header {
   background-color: #1abc9c;
