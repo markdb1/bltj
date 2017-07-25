@@ -2,29 +2,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-signin-client_id" content="398621332572-nhab6e6mk426c9ki64jaloisdbg723v2.apps.googleusercontent.com">
   <link rel="stylesheet" type="text/css" href="homeS.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Handlee" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <nav>
     <a href="home.html">HOME</a>
     <a href="blt.html">DAY</a>
-
 <!--
     <a href="wk.html">WEEK</a>
-
   <a href="#">MONTH</a>
   <a href="#">CATEGORIES</a>-->
 
-    <a href="faq.html">FAQ</a>
-
-
     <a href="faq.html">FAQ</a> Your Calendar
     <yo align = "center"  >DotBook </yo>
-
-
-    <div class="search-wrapper">
-
-
     <div id="my-signin2" align="top"></div>
     <script>
       function onSuccess(googleUser) {
@@ -50,9 +39,28 @@
     </script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <div id = "name"></div>
-
-    <div class="search-wrapper">
-    </div>
+    <div id="my-signin2" align="right"></div>
+    <script>
+      function onSuccess(googleUser) {
+        console.log("Logged in as: " + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render("my-signin2", {
+          scope: "profile email",
+          width: 240,
+          height: 50,
+          longtitle: true,
+          theme: "dark",
+          onsuccess: onSuccess,
+          onfailure: onFailure
+        });
+      }
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <div class="search-wrapper"></div>
 
   </nav>
 </head>
@@ -60,7 +68,7 @@
 <body onload="current()" , "close2", "close1">
   <!-- loads current date to date displays -abc-->
   <!-- Google signin -->
-  <div id="my-signin2" align="right"></div>
+  <!-- <div id="my-signin2" align="right"></div>
   <script>
     function onSuccess(googleUser) {
       console.log("Logged in as: " + googleUser.getBasicProfile().getName());
@@ -79,8 +87,10 @@
         onfailure: onFailure
       });
     }
-  </script>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  </script> -->
+  <!-- <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
+
+
   <div class="calendar table-responsive">
     <header></header>
     <!-- calendar config -abc -->
