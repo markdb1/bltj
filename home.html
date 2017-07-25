@@ -14,8 +14,6 @@
   <a href="#">MONTH</a>
   <a href="#">CATEGORIES</a>-->
     <a href="faq.html">FAQ</a> Your Calendar
-    <yo align = "center"  >DotBook </yo>
-
     <div class="search-wrapper">
 
     </div>
@@ -38,8 +36,12 @@
           'onfailure': onFailure
         });
       }
+      function(googleUser) {
+        document.getElementById('name').innerText = "Signed in: " + googleUser.getBasicProfile().getName();
+      }
     </script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <div id = "name"></div>
   </nav>
 </head>
 
