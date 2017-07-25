@@ -8,17 +8,46 @@
   <nav>
     <a href="home.html">HOME</a>
     <a href="blt.html">DAY</a>
-    <!--
+
+<!--
     <a href="wk.html">WEEK</a>
 
   <a href="#">MONTH</a>
   <a href="#">CATEGORIES</a>-->
     <a href="faq.html">FAQ</a> Your Calendar
+<<<<<<< HEAD
+=======
     <yo align = "center"  >DotBook </yo>
 
+>>>>>>> c482175790d17d06224953783eef724d563c5bdc
     <div class="search-wrapper">
 
     </div>
+    <div id="my-signin2" align="right"></div>
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+      function(googleUser) {
+        document.getElementById('name').innerText = "Signed in: " + googleUser.getBasicProfile().getName();
+      }
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <div id = "name"></div>
   </nav>
 </head>
 
@@ -58,7 +87,7 @@
       <li>Sunday</li>
       <li>Monday</li>
       <li>Tuesday</li>
-      <li>Wednsday</li>
+      <li>Wednesday</li>
       <li>Thursday</li>
       <li>Friday</li>
       <li>Saturday</li>
@@ -115,7 +144,7 @@
     <div class="header">
       <h1 class="tak">Tasks</h1>
       <input type="text" id="myInput" placeholder="Create a task...">
-      <span onclick="newElement()" class="addBtn">ADD TASK</span>
+      <span onclick="newElement()" title= "Add a Task" class="addBtn">ADD TASK</span>
     </div>
     <ul id="myUL">
       <li class="checked taskitem">Test 1 </li>
@@ -137,9 +166,9 @@
     </div>
     <div class="center-header">
       <span title="Create a Note" class="button create">NOTES+</span>
-      <span class="button done">&#10003</span>
+      <span class="Done Button">&#10003</span>
       <span title="Pick Note Color" class="button color">C</span>
-      <span title="Delete current Note" class="button delete">X</span>
+      <span title="Delete Current Note" class="button delete">X</span>
     </div>
     <div class="paper-container post">
       <textarea></textarea>
