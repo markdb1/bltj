@@ -273,7 +273,7 @@ section p, .container-fluid {
   font-family: cursive, sans-serif;
 }
 
-qupteDisplay.clear {
+#quoteDisplay.clear {
   clear: both;
 }
 section {
@@ -461,7 +461,6 @@ section {
 }
 
 textarea {
-  height: s;
   width: 50%;
   resize: none;
 }

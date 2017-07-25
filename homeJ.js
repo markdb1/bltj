@@ -118,114 +118,114 @@ function newQuote() {
 }
 // Notes stuff
 
-
 //flag to check if current note is new or existing note
 var position = -1;
 
-$(document).ready(function () {
+$(document).ready(function() {
+  $("ul").on("click", "li", function() {
+    //filter out span in the list
+    var noteContent = $(this)
+      .contents()
+      .filter(function() {
+        return this.nodeType === 3;
+      })
+      .text();
+    var currentColor = $(this).css("background-color");
+    //get existing note index in ul
+    position = $(this).index();
+    $(this).goEdit();
+    $(".button.delete").show();
+    $("textarea").val(noteContent);
+    $("textarea").css("background", currentColor);
+  });
 
-    $("ul").on("click", "li", function () {
-        //filter out span in the list
-        var noteContent = $(this).contents().filter(function () {return this.nodeType === 3; }).text();
-        var currentColor = $(this).css("background-color");
-        //get existing note index in ul
-        position = $(this).index();
-        $(this).goEdit();
-        $(".button.delete").show();
-        $("textarea").val(noteContent);
-        $("textarea").css("background", currentColor);
-    });
+  //delete the note from list
+  $("ul").on("click", "li>span", function(event) {
+    event.stopPropagation();
+    $(this).parent().remove();
+  });
 
-    //delete the note from list
-    $("ul").on("click", "li>span", function (event) {
-        event.stopPropagation();
-        $(this).parent().remove();
-    });
+  //enter note create
+  $(".button.create").click(() => {
+    $(this).goEdit();
+  });
 
+  //slide toggle palette
+  $(".button.color").click(() => {
+    $(".color-panel").slideToggle("fast");
+    $("textarea").focus();
+  });
 
-    //enter note create
-    $(".button.create").click(() => {
-        $(this).goEdit();
-    });
+  //pick color to change background color of current note
+  $(".cbutton").click(function() {
+    var color = $(this).css("background-color");
+    $("textarea").css("background", color);
+    $("textarea").focus();
+  });
 
-    //slide toggle palette
-    $(".button.color").click(() =>{
-        $(".color-panel").slideToggle("fast");
-        $("textarea").focus();
-    });
+  //delete current note
+  $(".button.delete").click(() => {
+    $(".notes-list li:eq(" + position + ")").remove();
+    $(this).goBack();
+  });
 
-    //pick color to change background color of current note
-    $(".cbutton").click(function(){
-        var color=$(this).css("background-color");
-        $("textarea").css("background" , color);
-        $("textarea").focus();
-    });
+  //finish creating or editing button
+  $(".button.done").click(() => {
+    //get information from edit view
+    var currentNote = $("textarea").val();
+    var noteColor = $("textarea").css("background-color");
 
-    //delete current note
-    $(".button.delete").click( () => {
-        $(".notes-list li:eq("+position+")").remove();
-        $(this).goBack();
-    });
+    //check input from the user. process the note if note is not empty
+    if (currentNote.trim()) {
+      var newNote = document.createElement("li");
+      var content = document.createTextNode(currentNote);
+      var noteDelete = document.createElement("span");
+      var buttonText = document.createTextNode("       x");
+      noteDelete.appendChild(buttonText);
+      newNote.appendChild(content);
+      newNote.appendChild(noteDelete);
+      newNote.style.background = noteColor;
+      if (position === -1) {
+        $(".notes-list").append(newNote);
+      } else {
+        $(".notes-list li:eq(" + position + ")").replaceWith(newNote);
+      }
+      $(this).goBack();
+    } else {
+      if (position !== -1) {
+        //delete existing node from the list if user clear all contents in the note
+        $(".notes-list li:eq(" + position + ")").remove();
+      }
+      $(this).goBack();
+    }
+  });
 
-    //finish creating or editing button
-    $(".button.done").click( () => {
-        //get information from edit view
-        var currentNote = $("textarea").val();
-        var noteColor = $("textarea").css("background-color");
-
-        //check input from the user. process the note if note is not empty
-        if(currentNote.trim()) {
-            var newNote = document.createElement("li");
-            var content = document.createTextNode(currentNote);
-            var noteDelete = document.createElement("span");
-            var buttonText = document.createTextNode("       x");
-            noteDelete.appendChild(buttonText);
-            newNote.appendChild(content);
-            newNote.appendChild(noteDelete);
-            newNote.style.background = noteColor;
-            if(position===-1){
-                $(".notes-list").append(newNote);
-            }
-            else{
-                $(".notes-list li:eq("+position+")").replaceWith(newNote);
-            }
-            $(this).goBack();
-        }
-        else{
-            if(position !== -1){
-                //delete existing node from the list if user clear all contents in the note
-                $(".notes-list li:eq("+position+")").remove();
-            }
-            $(this).goBack();
-        }
-    });
-
-    /*
+  /*
      *    create jquery plugin
      *    goBack function to show note list and hide edit view
      *    goEdit function to show edit view and hide note list
      */
-    (function($){
-        $.fn.goBack = () => {
-            $(".button.create").show();
-            $(".notes-list-container").show();
-            $(".button.done").hide();
-            $(".button.color").hide();
-            $(".button.delete").hide();
-            $(".color-panel").hide();
-            $(".paper-container").css("display","none");
-            $("textarea").val("");
-            $("textarea").css("background","white");
-            position = -1;
-        };
+  (function($) {
+    $.fn.goBack = () => {
+      $(".button.create").show();
+      $(".notes-list-container").show();
+      $(".button.done").hide();
+      $(".button.color").hide();
+      $(".button.delete").hide();
+      $(".color-panel").hide();
+      $(".paper-container").css("display", "none");
+      $("textarea").val("");
+      $("textarea").css("background", "white");
+      position = -1;
+    };
 
-        $.fn.goEdit = () => {
-            $(".button.create").hide();
-            $(".notes-list-container").hide();
-            $(".button.done").show();
-            $(".button.color").show();
-            $(".paper-container").css("display","flex");
-            $("textarea").focus();
-        };
-    }(jQuery));
+    $.fn.goEdit = () => {
+      $(".button.create").hide();
+      $(".notes-list-container").hide();
+      $(".button.done").show();
+      $(".button.color").show();
+      $(".paper-container").css("display", "flex");
+      $("textarea").focus();
+    };
+  })(jQuery);
 });
