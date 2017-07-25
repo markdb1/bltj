@@ -14,7 +14,11 @@ body {
 }
 
 .sidebar {
-  float: right;
+  /*float: right;*/
+  position: absolute;
+    top: 10%;
+    right: .5%;
+  width: 24%;
 }
 
 yo {
@@ -115,7 +119,10 @@ div someone {
   color: white !important;
 }
 .calendar {
-  float: left;
+  /*float: left;*/
+  position: relative;
+    top: 0%;
+    left: 0;
   width: 50%;
 }
 
@@ -203,8 +210,9 @@ h1 {
 
 input {
   border: none;
+  height: 50%;
   width: 75%;
-  padding: 4%;
+  padding: 2%;
   float: left;
   font-size: 16px;
 }
@@ -212,13 +220,13 @@ input {
 /*BUTTONS*/
 /* Button to add the tasks */
 .addBtn {
-  padding: 1%;
+  padding: 2%;
   width: 25%;
   background: dimgrey;
   color: white;
   float: left;
   text-align: center;
-  font-size: 16px;
+  font-size: 90%;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -290,8 +298,13 @@ section {
   color: black;
 }
 
+/*NOTES*/
+
 .flex-container {
-  float: right;
+  position: relative;
+    bottom: 0%;
+    left: 75%;
+  width: 22%;
   flex-direction:column;
   align-items: center;
   cursor: pointer;
