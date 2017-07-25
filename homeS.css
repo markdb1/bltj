@@ -4,21 +4,19 @@ ul {
 }
 * {
   box-sizing: border-box;
-}
+} 
 body {
   font-family: Verdana, sans-serif;
   background-color: mistyrose;
 }
 .heading {
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 
-.sidebar {
-  float: right;
-}
 
 yo {
 font-size: 35px;
+color: #1abc9c;
 }
 /*nav bar*/
 nav {
@@ -27,7 +25,7 @@ nav {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 nav a {
   color: black;
@@ -35,7 +33,7 @@ nav a {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 /*nav bar cont*/
 nav a:hover {
@@ -48,7 +46,7 @@ div someone {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 
 /* Calendar - Month header */
@@ -57,7 +55,7 @@ div someone {
   width: 100%;
   height: 30%;
   background: #1abc9c;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 /* Month list */
 .month ul {
@@ -85,7 +83,7 @@ div someone {
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 .weekdays li {
   display: inline-block;
@@ -115,18 +113,29 @@ div someone {
   color: white !important;
 }
 .calendar {
-  float: left;
+  /*float: left;*/
+  position: relative;
+    top: 0%;
+    left: 0;
   width: 50%;
 }
 
 /*taskbar css*/
+
+.sidebar {
+  /*float: right;*/
+  position: absolute;
+    top: 10%;
+    right: .5%;
+  width: 24%;
+}
 
 .header {
   background-color: #1abc9c;
   padding: 5px 30px;
   color: white;
   text-align: center;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 /* clear floats after header */
 .header:after {
@@ -203,8 +212,9 @@ h1 {
 
 input {
   border: none;
+  height: 50%;
   width: 75%;
-  padding: 4%;
+  padding: 2%;
   float: left;
   font-size: 16px;
 }
@@ -212,13 +222,13 @@ input {
 /*BUTTONS*/
 /* Button to add the tasks */
 .addBtn {
-  padding: 1%;
+  padding: 2%;
   width: 25%;
   background: dimgrey;
   color: white;
   float: left;
   text-align: center;
-  font-size: 16px;
+  font-size: 90%;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -243,12 +253,12 @@ input {
   position: fixed;
   bottom: 10px;
   width: 100%;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
   font-size: 50px;
 }
 
 .quoteBtn {
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
   width: 7%;
   height: 3%;
   background: #1abc9c;
@@ -290,8 +300,13 @@ section {
   color: black;
 }
 
+/*NOTES*/
+
 .flex-container {
-  float: right;
+  position: relative;
+    bottom: 0%;
+    left: 75%;
+  width: 22%;
   flex-direction:column;
   align-items: center;
   cursor: pointer;
@@ -359,7 +374,7 @@ section {
 
 .center-header {
   text-align: center;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
   font-size: 30px;
   color: black;
   padding-bottom: 25px;
