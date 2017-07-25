@@ -15,6 +15,7 @@ body {
 
 
 yo {
+  float: right;
 font-size: 35px;
 }
 /*nav bar*/
@@ -123,6 +124,7 @@ div someone {
 
 .sidebar {
   /*float: right;*/
+  font-family: "Handlee", cursive;
   position: absolute;
     top: 10%;
     right: .5%;
@@ -311,7 +313,7 @@ section {
   cursor: pointer;
   font-size: 20px;
   padding: 10px 30px;
-
+  font-family: "Handlee", cursive;
   clear: both;
 }
 
