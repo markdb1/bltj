@@ -169,6 +169,11 @@ nav a:hover {
   text-align: center;
   font-family: 'Acme', sans-serif;
 }
+yo {
+  float: right;
+font-size: 35px;
+color: #1abc9c;
+}
 
 /* clear floats after header */
 .header:after {
