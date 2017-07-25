@@ -3,21 +3,56 @@
   <meta name="google-signin-client_id" content="398621332572-nhab6e6mk426c9ki64jaloisdbg723v2.apps.googleusercontent.com">
   <link rel="stylesheet" type="text/css" href="homeS.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <nav>
     <a href="home.html">HOME</a>
     <a href="blt.html">DAY</a>
-    <!--
+
+<!-- 
     <a href="wk.html">WEEK</a>
 
   <a href="#">MONTH</a>
   <a href="#">CATEGORIES</a>-->
     <a href="faq.html">FAQ</a> Your Calendar
+<<<<<<< HEAD
     <yo align = "center"  >DotBook </yo>
 
+=======
+<<<<<<< HEAD
+=======
+    <yo align = "center"  >DotBook </yo>
+
+>>>>>>> c482175790d17d06224953783eef724d563c5bdc
+>>>>>>> 2eaef386cce0f49e4cb0e74bf44dcba3ca3edb98
     <div class="search-wrapper">
 
     </div>
+    <div id="my-signin2" align="right"></div>
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+      function(googleUser) {
+        document.getElementById('name').innerText = "Signed in: " + googleUser.getBasicProfile().getName();
+      }
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <div id = "name"></div>
   </nav>
 </head>
 

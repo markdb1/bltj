@@ -8,15 +8,14 @@ nav {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Lobster', cursive;
-}
+  font-family: 'Acme', sans-serif;}
 nav a {
   color: black;
   text-align: center;
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;;
 }
 /*nav bar cont*/
 nav a:hover {
@@ -29,7 +28,7 @@ div someone {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;;
 }
 body {
     background-color: mistyrose;
@@ -148,9 +147,9 @@ input{
 }
 
 .group {
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
 
 .heading {
-  font-family: 'Lobster', cursive;
+  font-family: 'Acme', sans-serif;
 }
