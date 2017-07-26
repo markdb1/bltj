@@ -499,7 +499,7 @@ textarea {
 /*making sure the quotes dont intersect with the notes -abc*/
 .quoty {
  float:left;
- width:50%;
+ width:75%;
 }
 
 .dt {
