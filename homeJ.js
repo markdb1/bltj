@@ -182,7 +182,7 @@ $(document).ready(function() {
       var newNote = document.createElement("li");
       var content = document.createTextNode(currentNote);
       var noteDelete = document.createElement("span");
-      var buttonText = document.createTextNode("X");
+      var buttonText = document.createTextNode("x");
       noteDelete.appendChild(buttonText);
       newNote.appendChild(content);
       newNote.appendChild(noteDelete);
