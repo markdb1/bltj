@@ -224,6 +224,7 @@ h1 {
 }
 
 input {
+  font-family: "Handlee", cursive;
   border: none;
   height: 50%;
   width: 75%;
@@ -321,7 +322,7 @@ section {
     left: 75%;*/
   height: 150%;
   width: 25%;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   font-size: 20px;

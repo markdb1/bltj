@@ -122,7 +122,8 @@ function newQuote() {
 var position = -1;
 
 $(document).ready(function() {
-  $("ul").on("click", "li", function() {
+  // $("ul").on("click", "li", function() {
+  $(".notes-list").on("click", "li", function() {
     //filter out span in the list
     var noteContent = $(this)
       .contents()
@@ -130,6 +131,7 @@ $(document).ready(function() {
         return this.nodeType === 3;
       })
       .text();
+    // background color from text
     var currentColor = $(this).css("background-color");
     //get existing note index in ul
     position = $(this).index();
@@ -140,7 +142,7 @@ $(document).ready(function() {
   });
 
   //delete the note from list
-  $("ul").on("click", "li>span", function(event) {
+  $(".notes-list").on("click", "li>span", function(event) {
     event.stopPropagation();
     $(this).parent().remove();
   });
@@ -170,7 +172,7 @@ $(document).ready(function() {
   });
 
   //finish creating or editing button
-  $(".button.done").click(() => {
+  $(".button.done").click( () => {
     //get information from edit view
     var currentNote = $("textarea").val();
     var noteColor = $("textarea").css("background-color");
@@ -180,7 +182,7 @@ $(document).ready(function() {
       var newNote = document.createElement("li");
       var content = document.createTextNode(currentNote);
       var noteDelete = document.createElement("span");
-      var buttonText = document.createTextNode("       X");
+      var buttonText = document.createTextNode("X");
       noteDelete.appendChild(buttonText);
       newNote.appendChild(content);
       newNote.appendChild(noteDelete);
