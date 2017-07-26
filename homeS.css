@@ -11,14 +11,13 @@ body {
   background-color: mistyrose;
 }
 .heading {
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 
 
 yo {
   float: right;
 font-size: 35px;
-color: #1abc9c;
 }
 /*nav bar*/
 nav {
@@ -27,7 +26,7 @@ nav {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 nav a {
   color: black;
@@ -35,7 +34,7 @@ nav a {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 /*nav bar cont*/
 nav a:hover {
@@ -48,7 +47,7 @@ div someone {
   padding: 14px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 
 /* Calendar - Month header */
@@ -58,7 +57,7 @@ div someone {
   width: 100%;
   height: 30%;
   background: #1abc9c;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 /* Month list */
 .month ul {
@@ -86,7 +85,7 @@ div someone {
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 .weekdays li {
   display: inline-block;
@@ -148,7 +147,7 @@ div someone {
   padding: 5px 30px;
   color: white;
   text-align: center;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
 }
 /* clear floats after header */
 .header:after {
@@ -267,12 +266,12 @@ input {
   position: fixed;
   bottom: 10px;
   width: 100%;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
   font-size: 50px;
 }
 
 .quoteBtn {
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
   width: 7%;
   height: 3%;
   background: #1abc9c;
@@ -389,7 +388,7 @@ section {
 
 .center-header {
   text-align: center;
-  font-family: 'Acme', sans-serif;
+  font-family: 'Lobster', cursive;
   font-size: 30px;
   color: #eee;
   padding-bottom: 25px;
