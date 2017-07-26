@@ -261,6 +261,11 @@ input {
 #drag-33,
 #drag-34,
 #drag-35,
+#drag-36,
+#drag-37,
+#drag-38,
+#drag-39,
+#drag-40,
  {
   margin: 0%;
   padding: .1%;
@@ -326,4 +331,8 @@ input {
 .stack7{
   position: absolute;
   transform: translateX(-7vw) translateY(60vh);
+}
+.stack8{
+  position: absolute;
+  transform: translateX(-7vw) translateY(70vh);
 }
