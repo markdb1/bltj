@@ -224,6 +224,7 @@ h1 {
 }
 
 input {
+  font-family: "Handlee", cursive;
   border: none;
   height: 50%;
   width: 75%;
@@ -321,7 +322,7 @@ section {
     left: 75%;*/
   height: 150%;
   width: 25%;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   font-size: 20px;
@@ -446,7 +447,7 @@ section {
   color:dimgrey;
 }
 
-#notes ul{
+.notes-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -455,7 +456,7 @@ section {
 
 #notes li {
     position:relative;
-    padding: 0;
+    padding: 1% 1% 1% 1%;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -465,9 +466,9 @@ section {
   display: none;
   height: 50%;
   width:100%;
-  /*min-height:50px;
+  min-height:50px;
   max-height: 50%;
-  min-width: 100%;*/
+  min-width: 100%;
 
 }
 
@@ -492,6 +493,7 @@ section {
 }
 
 textarea {
+  /*height: 100%;*/
   width: 50%;
   resize: none;
 }
@@ -499,7 +501,7 @@ textarea {
 /*making sure the quotes dont intersect with the notes -abc*/
 .quoty {
  float:left;
- width:75%;
+ width:70%;
 }
 
 .dt {
